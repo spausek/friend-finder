@@ -1,0 +1,12 @@
+body {
+	background: url(landscape.jpeg);
+	background-repeat: no-repeat;
+	background-size: 2600px 1350px;
+
+}
+
+.title {
+	text-align: center;
+	margin-top: 150px;
+}
+
