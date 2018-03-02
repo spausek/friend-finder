@@ -122,9 +122,29 @@
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
+
+                <br>
+
+                <button type="button" class="btn btn-secondary btn-lg" id= "submit">Submit Survey</button>
                 
  </div>
         
+<script type="text/javascript">
+    //Capture inputs
+    $('#submit').on('click', function(){
+        var nameInput = $('#name').val().trim();
+        var photoInput = $('#photo').val().trim();
+        if (nameInput === '' || photoInput === ''){
+            alert('Please fill in name and add a link to a photo');
+            return
+        }
 
+        
+
+    });
+
+    //get url
+
+</script>
 </body>
 </html>
