@@ -4,9 +4,10 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./assets/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<title>Survey</title>
+	<script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+   <title>Survey</title>
 </head>
 <body>
  
@@ -23,7 +24,7 @@
  
 
   <h5><strong>Question 1</strong></h5>
-                <p> I'm more of Ghost Type Pokemon than a Fire Type Pokemon</p>
+                <p>A ruler's authority should come from a divine source</p>
                 <select data-placeholder="" class="browser-default" id="q1">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -33,7 +34,7 @@
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
                 <h5><strong>Question 2</strong></h5>
-                <p>If I find myself in stranger's house I'll get the urge smash pottery in search of Rupees</p>
+                <p>Sometimes you just have to march on Rome</p>
                 <select data-placeholder="" class="browser-default" id="q2">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -43,7 +44,7 @@
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
                 <h5><strong>Question 3</strong></h5>
-                <p>I like experimenting with mushrooms</p>
+                <p>I'd rather have my army on horse back than on foot</p>
                 <select data-placeholder="" class="browser-default" id="q3">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -53,7 +54,7 @@
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
                 <h5><strong>Question 4</strong></h5>
-                <p>There are few problem's that can't be solved with jumping</p>
+                <p>I prefer a republic to a monarchy</p>
                 <select data-placeholder="" class="browser-default" id="q4">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -63,7 +64,7 @@
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
                 <h5><strong>Question 5</strong></h5>
-                <p>I'd prefer a nice compact ball to live in</p>
+                <p>Someday I'd like to retire to a villa and get drunk all day</p>
                 <select data-placeholder="" class="browser-default" id="q5">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -73,7 +74,7 @@
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
                 <h5><strong>Question 6</strong></h5>
-                <p>Advice from talking trees should always be followed</p>
+                <p>I'm already thinking about how big my tomb will be</p>
                 <select data-placeholder="" class="browser-default" id="q6">
                     <option value="">Choose an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -83,7 +84,7 @@
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
                 <h5><strong>Question 7</strong></h5>
-                <p>I find firing missiles at parasitic floating jelly fish monsters relaxing</p>
+                <p>An empire can never be too big</p>
                 <select data-placeholder="" class="browser-default" id="q7">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -93,7 +94,7 @@
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
                 <h5><strong>Question 8</strong></h5>
-                <p>There's no shame in being player 2</p>
+                <p>Even ruler's should be subject to the law</p>
                 <select data-placeholder="" class="browser-default" id="q8">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -103,7 +104,7 @@
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
                 <h5><strong>Question 9</strong></h5>
-                <p>I'd be cool with blowing up a whole inhabited planet</p>
+                <p>Burning down cities is a great way to pass the time</p>
                 <select data-placeholder="" class="browser-default" id="q9">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -113,7 +114,7 @@
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
                 <h5><strong>Question 10</strong></h5>
-                <p>I'b be happy for my brother if he was more famous than me</p>
+                <p>Soldiers should only obey a commander that they respect</p>
                 <select data-placeholder="" class="browser-default" id="q10">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -126,11 +127,18 @@
                 <br>
 
                 <button type="button" class="btn btn-secondary btn-lg" id= "submit">Submit Survey</button>
+    <div id="resultsModal">
+          <h2 id="matchName"></h2>
+          <img id="matchImg" src="" alt="">
+    </div> 
                 
  </div>
+
+ 
         
-<script type="text/javascript">
+<script type="text/javascript" >
     //Capture inputs
+
     $('#submit').on('click', function(){
         var nameInput = $('#name').val().trim();
         var photoInput = $('#photo').val().trim();
@@ -139,11 +147,39 @@
             return
         }
 
+        else{
+
+            var userData = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+            }
+
+            var currentURL = window.location.origin;
+            console.log(userData);
+            console.log(currentURL);
+
+            $.post(currentURL + "/api/friends", userData, function(data) {
+        
+            $("#matchName").text(data.name);
+            $('#matchImg').attr("src", data.photo);
+            console.log(data)
+           // $("#resultsModal").show();
+      });
+            
+
+        }
+
         
 
     });
 
-    //get url
+    
+    
+
+
+
+    
 
 </script>
 </body>
