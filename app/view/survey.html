@@ -127,12 +127,18 @@
                 <br>
 
                 <button type="button" class="btn btn-secondary btn-lg" id= "submit">Submit Survey</button>
-    <div id="resultsModal">
-          <h2 id="matchName"></h2>
-          <img id="matchImg" src="" alt="">
-    </div> 
+
+                <br>
+            <!-- crappy div to display results -->
+                <div>
+                    <h1 id="match-name"></h1>
+                    <img id="match-photo" src="" alt="">
+                </div>
+            
+
+   
                 
- </div>
+        </div>
 
  
         
@@ -150,22 +156,22 @@
         else{
 
             var userData = {
-                name: $("#name").val(),
-                photo: $("#photo").val(),
-                scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+                name: $('#name').val(),
+                photo: $('#photo').val(),
+                scores: [$('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $('#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val(), ]
             }
 
             var currentURL = window.location.origin;
             console.log(userData);
             console.log(currentURL);
 
-            $.post(currentURL + "/api/friends", userData, function(data) {
+            $.post(currentURL + '/api/friends', userData, function(data) {
         
-            $("#matchName").text(data.name);
-            $('#matchImg').attr("src", data.photo);
+            $('#match-name').text(data.name);
+            $('#match-photo').attr("src", data.photo);
+            console.log(data.name);
             console.log(data)
-           // $("#resultsModal").show();
-      });
+            
             
 
         }

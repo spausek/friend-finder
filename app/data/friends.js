@@ -6,13 +6,13 @@ const friends = [
 
   	{
   	   'name': 'Genghis Khan',
-  	   'photo': 'https://en.wikipedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg',
+  	   'photo': 'https://upload.wikimedia.org/wikipedia/commons/3/35/YuanEmperorAlbumGenghisPortrait.jpg',
   	   'scores': [3,3,5,2,4,2,5,2,5,5]
   	},
 
   	{
   		'name': 'Lucius Cornelius Sulla',
-  		'photo': 'https://en.wikipedia.org/wiki/File:Sulla_Glyptothek_Munich_309.jpg',
+  		'photo': 'https://static1.squarespace.com/static/54603f2fe4b0719cb5b13cc2/t/5837a7c22994ca2c6bc663f9/1480042444853/?format=750w',
   		'scores': [1,5,2,4,5,2,4,4,4,5]
   	}
 
